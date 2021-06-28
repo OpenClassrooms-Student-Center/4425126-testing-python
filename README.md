@@ -16,7 +16,7 @@ du répertoire.
 
 ### 1. Télécharger le projet sur votre répertoire local : 
 ```
-https://github.com/OpenClassrooms-Student-Center/4425126-testing-python.git 
+git clone https://github.com/OpenClassrooms-Student-Center/4425126-testing-python.git 
 cd 4425126-testing-python
 ```
 ### 2. Mettre en place un environnement virtuel :
