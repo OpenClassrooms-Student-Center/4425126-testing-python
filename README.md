@@ -20,10 +20,11 @@ git clone https://github.com/OpenClassrooms-Student-Center/4425126-testing-pytho
 cd 4425126-testing-python
 ```
 ### 2. Mettre en place un environnement virtuel :
-* Créer l'environnement virtuel: `python -m venv env`
+* Créer l'environnement virtuel: `python -m venv venv`
 * Activer l'environnement virtuel :
-    * Windows : `env\Scripts\activate.bat`
-    * Unix/MacOS : `source env/bin/activate`
+    * Windows : `venv\Scripts\activate.bat`
+    * Unix/MacOS : `source venv/bin/activate`
+
     
 ### 3. Installer les dépendances du projet
 ```
