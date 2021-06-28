@@ -36,13 +36,13 @@ pip install -r requirements.txt
 ## Corrections
 1. Proposition de correction pour les tests unitaires avec UnitTest :
 ```
-git checkout
+git checkout unittest-test
 python -m unittest discover tests/
 ```
 
 2. Proposition de correction pour les tests unitaires avec Pytest :
 ```
-git checkout
+git checkout pytest-test
 pytest tests/
 ```
 
