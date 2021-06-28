@@ -23,7 +23,7 @@ cd 4425126-testing-python
 * Créer l'environnement virtuel: `python -m venv env`
 * Activer l'environnement virtuel :
     * Windows : `env\Scripts\activate.bat`
-    * Unix/MacOS : `source tutorial-env/bin/activate`
+    * Unix/MacOS : `source env/bin/activate`
     
 ### 3. Installer les dépendances du projet
 ```
