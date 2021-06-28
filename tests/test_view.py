@@ -30,7 +30,7 @@ class TestView(unittest.TestCase):
 
         output = self.temp_stdout.getvalue()
         expect_out = "=========== GOOD-BYE ===========\n"
-        assert output == expect_out
+        self.assertEqual(output, expect_out)
 
     def test_should_print_result(self):
         operation = "5+10"
@@ -40,7 +40,7 @@ class TestView(unittest.TestCase):
 
         output = self.temp_stdout.getvalue()
         expect_out = f"RESULTAT : {operation} = {result}\n"
-        assert output == expect_out
+        self.assertEqual(output, expect_out)
 
     def test_should_print_result_with_error(self):
         operation = "5+10+A"
@@ -50,7 +50,7 @@ class TestView(unittest.TestCase):
 
         output = self.temp_stdout.getvalue()
         expect_out = f"Votre operation est incorrect ! : {operation}\n"
-        assert output == expect_out
+        self.assertEqual(output, expect_out)
 
 
 if __name__ == "__main__":
