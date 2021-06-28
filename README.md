@@ -1,5 +1,5 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-#Mini-Projet Calculatrice
+# Mini-Projet Calculatrice
 
 Ce projet a été implémenté dans le but de s'entrainer au test unitaire à l'aide Pytest et UnitTest. Le code source
 contient un mini-projet calculatrice qui permet d'effectuer 4 opérations différentes (addition, soustraction, 
@@ -14,23 +14,23 @@ du répertoire.
 
 ## Installation
 
-###1. Télécharger le projet sur votre répertoire local : 
+### 1. Télécharger le projet sur votre répertoire local : 
 ```
-git clone 
-cd 
+https://github.com/OpenClassrooms-Student-Center/4425126-testing-python.git 
+cd 4425126-testing-python
 ```
-###2. Mettre en place un environnement virtuel :
+### 2. Mettre en place un environnement virtuel :
 * Créer l'environnement virtuel: `python -m venv env`
 * Activer l'environnement virtuel :
     * Windows : `env\Scripts\activate.bat`
     * Unix/MacOS : `source tutorial-env/bin/activate`
     
-###3. Installer les dépendances du projet
+### 3. Installer les dépendances du projet
 ```
 pip install -r requirements.txt
 ```
 
-##Démarrage
+## Démarrage
 * Lancer le script à l'aide de la commande suivante : `python main.py`
 
 ## Corrections
