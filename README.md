@@ -44,7 +44,19 @@ python -m unittest discover tests/
 2. Proposition de correction pour les tests unitaires avec Pytest :
 ```
 git checkout pytest-test
-pytest tests/
+pytest
+```
+
+3. Proposition de correction pour les mocks avec Pytest:
+```
+git checkout mock-test
+pytest
+```
+
+4. Proposition de correction pour les tests paramétriques Pytest :
+```
+git checkout parametrize-test
+pytest
 ```
 
 
