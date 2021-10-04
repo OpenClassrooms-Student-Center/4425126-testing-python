@@ -5,6 +5,7 @@ from calculate.operators import Operators
 class Controller:
     def __init__(self):
         self.operator = Operators()
+        self.result = None
 
     def run(self):
         """
@@ -16,13 +17,13 @@ class Controller:
         while is_home_menu_run:
             input_msg = "Entrez votre choix"
             user_input = View.get_user_input(input_msg)
-            if self.__is_input_valid(user_input):
-                self.__operations(user_input)
+            if self._is_input_valid(user_input):
+                self._operations(user_input)
                 View.print_menu()
-            is_home_menu_run = self.__is_quit(user_input)
+            is_home_menu_run = self._is_quit(user_input)
         View.end_message()
 
-    def __is_input_valid(self, user_input):
+    def _is_input_valid(self, user_input):
         """
             Checks if the input corresponds to a possibility of operations.
 
@@ -32,7 +33,7 @@ class Controller:
         """
         return user_input in ["1", "2", "3", "4"]
 
-    def __operations(self, user_input):
+    def _operations(self, user_input):
         """
             Calls the function corresponding with the operation ask by the user and
             get the user operation by an input.
@@ -43,18 +44,18 @@ class Controller:
         operation = View.get_user_input(input_msg)
 
         if user_input == "1":
-            result = self.operator.addition(operation)
+            self.result = self.operator.addition(operation)
         elif user_input == "2":
-            result = self.operator.substraction(operation)
+            self.result = self.operator.substraction(operation)
         elif user_input == "3":
-            result = self.operator.multiplication(operation)
+            self.result = self.operator.multiplication(operation)
         elif user_input == "4":
-            result = self.operator.division(operation)
+            self.result = self.operator.division(operation)
 
-        View.print_result(operation, result)
+        View.print_result(operation, self.result)
         View.continue_message()
 
-    def __is_quit(self, user_input):
+    def _is_quit(self, user_input):
         """
             Checks if the user ask for stop the script thanks to the input enter
             in the method run().
