@@ -17,13 +17,13 @@ class Controller:
         while is_home_menu_run:
             input_msg = "Entrez votre choix"
             user_input = View.get_user_input(input_msg)
-            if self.__is_input_valid(user_input):
-                self.__operations(user_input)
+            if self._is_input_valid(user_input):
+                self._operations(user_input)
                 View.print_menu()
-            is_home_menu_run = self.__is_quit(user_input)
+            is_home_menu_run = self._is_quit(user_input)
         View.end_message()
 
-    def __is_input_valid(self, user_input):
+    def _is_input_valid(self, user_input):
         """
             Checks if the input corresponds to a possibility of operations.
 
@@ -33,7 +33,7 @@ class Controller:
         """
         return user_input in ["1", "2", "3", "4"]
 
-    def __operations(self, user_input):
+    def _operations(self, user_input):
         """
             Calls the function corresponding with the operation ask by the user and
             get the user operation by an input.
@@ -55,7 +55,7 @@ class Controller:
         View.print_result(operation, self.result)
         View.continue_message()
 
-    def __is_quit(self, user_input):
+    def _is_quit(self, user_input):
         """
             Checks if the user ask for stop the script thanks to the input enter
             in the method run().

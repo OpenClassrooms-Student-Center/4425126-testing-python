@@ -13,8 +13,8 @@ class Operators:
         """
         self.operation = operation
         self.signe = "+"
-        if self.__is_operation_valid():
-            self.__calculate_addition()
+        if self._is_operation_valid():
+            self._calculate_addition()
             return self.result
 
     def substraction(self, operation):
@@ -26,8 +26,8 @@ class Operators:
         """
         self.operation = operation
         self.signe = "-"
-        if self.__is_operation_valid():
-            self.__calculate_substraction()
+        if self._is_operation_valid():
+            self._calculate_substraction()
             return self.result
 
     def multiplication(self, operation):
@@ -39,8 +39,8 @@ class Operators:
         """
         self.operation = operation
         self.signe = "*"
-        if self.__is_operation_valid():
-            self.__calculate_multiplication()
+        if self._is_operation_valid():
+            self._calculate_multiplication()
             return self.result
 
     def division(self, operation):
@@ -52,25 +52,25 @@ class Operators:
         """
         self.operation = operation
         self.signe = "/"
-        if self.__is_operation_valid():
-            self.__calculate_division()
+        if self._is_operation_valid():
+            self._calculate_division()
             return self.result
 
-    def __is_operation_valid(self):
+    def _is_operation_valid(self):
         """
             Checks if the operation have the correct syntax.
 
             :return: True if the operation is valid
         """
-        if self.__is_symbol_valid():
+        if self._is_symbol_valid():
             self.numbers = self.operation.split(self.signe[0])
             for number in self.numbers:
-                if not self.__is_float(number):
+                if not self._is_float(number):
                     return False
             return True
         return False
 
-    def __is_symbol_valid(self):
+    def _is_symbol_valid(self):
         """
             Checks if the operation match with the type of operation request by the user.
 
@@ -82,7 +82,7 @@ class Operators:
                 return False
         return True
 
-    def __is_float(self, value):
+    def _is_float(self, value):
         """
             Checks if all others symbols can be converted to float value.
 
@@ -94,7 +94,7 @@ class Operators:
         except ValueError:
             return False
 
-    def __calculate_addition(self):
+    def _calculate_addition(self):
         """
             Makes the addition calculation.
         """
@@ -102,7 +102,7 @@ class Operators:
         for number in self.numbers:
             self.result += float(number)
 
-    def __calculate_substraction(self):
+    def _calculate_substraction(self):
         """
             Makes the substraction calculation.
         """
@@ -110,7 +110,7 @@ class Operators:
         for i in range(1, len(self.numbers)):
             self.result -= float(self.numbers[i])
 
-    def __calculate_multiplication(self):
+    def _calculate_multiplication(self):
         """
             Makes the multiplication calculation.
         """
@@ -118,7 +118,7 @@ class Operators:
         for number in self.numbers:
             self.result *= float(number)
 
-    def __calculate_division(self):
+    def _calculate_division(self):
         """
             Makes the division calculation.
         """
