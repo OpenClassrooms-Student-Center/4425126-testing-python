@@ -5,6 +5,7 @@ from calculate.operators import Operators
 class Controller:
     def __init__(self):
         self.operator = Operators()
+        self.result = None
 
     def run(self):
         """
@@ -43,15 +44,15 @@ class Controller:
         operation = View.get_user_input(input_msg)
 
         if user_input == "1":
-            result = self.operator.addition(operation)
+            self.result = self.operator.addition(operation)
         elif user_input == "2":
-            result = self.operator.substraction(operation)
+            self.result = self.operator.substraction(operation)
         elif user_input == "3":
-            result = self.operator.multiplication(operation)
+            self.result = self.operator.multiplication(operation)
         elif user_input == "4":
-            result = self.operator.division(operation)
+            self.result = self.operator.division(operation)
 
-        View.print_result(operation, result)
+        View.print_result(operation, self.result)
         View.continue_message()
 
     def __is_quit(self, user_input):
