@@ -6,10 +6,10 @@ class View:
         """
         print("\n=========== MENU ===========")
         print("1 - Addition")
-        print("2 - Soustraction")
+        print("2 - Subtraction")
         print("3 - Multiplication")
         print("4 - Division")
-        print("5 - Quitter")
+        print("5 - Quit")
         print("============================\n")
 
     @staticmethod
@@ -35,7 +35,7 @@ class View:
         """
             Requests to press enter to continue.
         """
-        input("Appuyez sur ENTRER pour continuer ...")
+        input("Press ENTER to continue ...")
 
     @staticmethod
     def print_result(operation, result):
@@ -46,6 +46,6 @@ class View:
             :param result: The result calculate by the script
         """
         if result is not None:
-            print(f"RESULTAT : {operation} = {result}")
+            print(f"RESULT : {operation} = {result}")
         else:
-            print(f"Votre operation est incorrect ! : {operation}")
+            print(f"Invalid operator selected! : {operation}")
