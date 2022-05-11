@@ -46,7 +46,7 @@ class Controller:
         if user_input == "1":
             self.result = self.operator.addition(operation)
         elif user_input == "2":
-            self.result = self.operator.substraction(operation)
+            self.result = self.operator.subtraction(operation)
         elif user_input == "3":
             self.result = self.operator.multiplication(operation)
         elif user_input == "4":

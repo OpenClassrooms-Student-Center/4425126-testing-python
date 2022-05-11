@@ -1,7 +1,7 @@
 class Operators:
     def __init__(self):
         self.operation = ""
-        self.signe = ""
+        self.operator = ""
         self.result = 0.0
 
     def addition(self, operation):
@@ -12,22 +12,22 @@ class Operators:
             :return: The addition result if the operation is valid.
         """
         self.operation = operation
-        self.signe = "+"
+        self.operator = "+"
         if self._is_operation_valid():
             self._calculate_addition()
             return self.result
 
-    def substraction(self, operation):
+    def subtraction(self, operation):
         """
-            Handles an substraction operation.
+            Handles an subtraction operation.
 
             :param operation: The requested operation by user.
-            :return: The substraction result if the operation is valid.
+            :return: The subtraction result if the operation is valid.
         """
         self.operation = operation
-        self.signe = "-"
+        self.operator = "-"
         if self._is_operation_valid():
-            self._calculate_substraction()
+            self._calculate_subtraction()
             return self.result
 
     def multiplication(self, operation):
@@ -38,7 +38,7 @@ class Operators:
             :return: The multiplication result if the operation is valid.
         """
         self.operation = operation
-        self.signe = "*"
+        self.operator = "*"
         if self._is_operation_valid():
             self._calculate_multiplication()
             return self.result
@@ -51,7 +51,7 @@ class Operators:
             :return: The division result if the operation is valid.
         """
         self.operation = operation
-        self.signe = "/"
+        self.operator = "/"
         if self._is_operation_valid():
             self._calculate_division()
             return self.result
@@ -63,7 +63,7 @@ class Operators:
             :return: True if the operation is valid
         """
         if self._is_symbol_valid():
-            self.numbers = self.operation.split(self.signe[0])
+            self.numbers = self.operation.split(self.operator[0])
             for number in self.numbers:
                 if not self._is_float(number):
                     return False
@@ -78,7 +78,7 @@ class Operators:
         """
         symbols = [symbol for symbol in self.operation if not symbol.isdigit()]
         for symbol in symbols:
-            if symbol != self.signe and symbol != "." and symbol != " ":
+            if symbol != self.operator and symbol != "." and symbol != " ":
                 return False
         return True
 
@@ -102,9 +102,9 @@ class Operators:
         for number in self.numbers:
             self.result += float(number)
 
-    def _calculate_substraction(self):
+    def _calculate_subtraction(self):
         """
-            Makes the substraction calculation.
+            Makes the subtraction calculation.
         """
         self.result = float(self.numbers[0])
         for i in range(1, len(self.numbers)):
