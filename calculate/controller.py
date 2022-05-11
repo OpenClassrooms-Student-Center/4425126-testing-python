@@ -15,7 +15,7 @@ class Controller:
         View.print_menu()
         is_home_menu_run = True
         while is_home_menu_run:
-            input_msg = "Entrez votre choix"
+            input_msg = "Enter your choice: "
             user_input = View.get_user_input(input_msg)
             if self._is_input_valid(user_input):
                 self._operations(user_input)
@@ -40,7 +40,7 @@ class Controller:
 
             :param user_input: User input enter in the method run().
         """
-        input_msg = "Entrez votre opération"
+        input_msg = "Enter your operation: "
         operation = View.get_user_input(input_msg)
 
         if user_input == "1":
